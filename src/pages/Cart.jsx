@@ -97,27 +97,27 @@ export default function Cart() {
   </div>
 )}
 
+                  
                   {/* FABRIC */}
-                  <div className="mt-3 flex items-center gap-4">
-                    <div>
-                      <p className="text-sm font-medium">
-                        Fabric Color
-                      </p>
-                      <div
-                        className="w-6 h-6 rounded border"
-                        style={{ backgroundColor: item.fabricColor }}
-                      />
-                    </div>
+<div className="mt-3 flex items-center gap-4">
+  <div>
+    <p className="text-sm font-medium">
+      Fabric Color
+    </p>
+    <div
+      className="w-6 h-6 rounded border"
+      style={{ backgroundColor: item.fabricColor }}
+    />
+  </div>
+</div>
 
-                     
+{/* NOTES */}
+{item.notes && (
+  <p className="text-sm mt-3">
+    <strong>Notes:</strong> {item.notes}
+  </p>
+)}
 
-                  {/* NOTES */}
-                  {item.notes && (
-                    <p className="text-sm mt-3">
-                      <strong>Notes:</strong> {item.notes}
-                    </p>
-                  )}
-                </div>
 
                 {/* RIGHT */}
                 <div className="text-right">
@@ -149,6 +149,7 @@ export default function Cart() {
     </div>
   );
 }
+
 
 
 
