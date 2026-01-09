@@ -109,19 +109,7 @@ export default function Cart() {
                       />
                     </div>
 
-                    {/* {item.fabricImage && (
-                      <div>
-                        <p className="text-sm font-medium">
-                          Fabric Image
-                        </p>
-                        <img
-                          src={item.fabricImage}
-                          alt="Fabric"
-                          className="w-16 h-16 object-cover rounded border"
-                        />
-                      </div>
-                    )}
-                  </div> */}
+                     
 
                   {/* NOTES */}
                   {item.notes && (
@@ -161,6 +149,7 @@ export default function Cart() {
     </div>
   );
 }
+
 
 
 
