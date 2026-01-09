@@ -123,7 +123,7 @@ export default function Cart() {
                 {/* RIGHT */}
                 <div className="text-right">
                   <p className="text-lg font-medium">
-                    ₹{item.basePrice}
+                    ₹{Number(item.basePrice)}
                   </p>
 
                   <button
@@ -150,6 +150,7 @@ export default function Cart() {
     </div>
   );
 }
+
 
 
 
