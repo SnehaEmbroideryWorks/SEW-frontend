@@ -86,7 +86,7 @@ export default function DesignDetail() {
     designId: design._id,
     name: design.name,
     neckType: design.neckType,
-    price: Number(design.price),
+    price: Number(design.basePrice),
     measurements,
     imageUrl: design.imageUrl,
     fabricColor,
@@ -340,5 +340,6 @@ export default function DesignDetail() {
     </div>
   );
 }
+
 
 
