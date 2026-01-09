@@ -97,32 +97,44 @@ export default function Cart() {
   </div>
 )}
 
-                  
                   {/* FABRIC */}
-<div className="mt-3 flex items-center gap-4">
-  <div>
-    <p className="text-sm font-medium">
-      Fabric Color
-    </p>
-    <div
-      className="w-6 h-6 rounded border"
-      style={{ backgroundColor: item.fabricColor }}
-    />
-  </div>
-</div>
+                  <div className="mt-3 flex items-center gap-4">
+                    <div>
+                      <p className="text-sm font-medium">
+                        Fabric Color
+                      </p>
+                      <div
+                        className="w-6 h-6 rounded border"
+                        style={{ backgroundColor: item.fabricColor }}
+                      />
+                    </div>
 
-{/* NOTES */}
-{item.notes && (
-  <p className="text-sm mt-3">
-    <strong>Notes:</strong> {item.notes}
-  </p>
-)}
+                    {item.fabricImage && (
+                      <div>
+                        <p className="text-sm font-medium">
+                          Fabric Image
+                        </p>
+                        <img
+                          src={item.fabricImage}
+                          alt="Fabric"
+                          className="w-16 h-16 object-cover rounded border"
+                        />
+                      </div>
+                    )}
+                  </div>
 
+                  {/* NOTES */}
+                  {item.notes && (
+                    <p className="text-sm mt-3">
+                      <strong>Notes:</strong> {item.notes}
+                    </p>
+                  )}
+                </div>
 
                 {/* RIGHT */}
                 <div className="text-right">
                   <p className="text-lg font-medium">
-                    ₹{Number(item.price)}
+                    ₹{item.price}
                   </p>
 
                   <button
@@ -149,8 +161,4 @@ export default function Cart() {
     </div>
   );
 }
-
-
-
-
 
