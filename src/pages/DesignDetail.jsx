@@ -167,71 +167,69 @@ export default function DesignDetail() {
             + Add another thread color
           </button>
 
-          {/* FABRIC PICKER */}
-          <h3 className="font-medium mt-6 mb-2">Blouse Fabric</h3>
+          {/* FABRIC PICKER — VISUALLY HIGHLIGHTED */}
+          <h3 className="font-medium mt-8 mb-2">Blouse Fabric</h3>
 
-          <input
-            type="file"
-            accept="image/*"
-            onChange={e => {
-              const file = e.target.files[0];
-              if (!file) return;
-              setFabricImage(URL.createObjectURL(file));
-            }}
-          />
+          <div className="border-2 border-dashed border-blue-400 bg-blue-50 rounded-lg p-4">
+            <label className="block text-sm font-medium text-blue-900 mb-2">
+              Upload fabric image
+            </label>
 
-          {fabricImage && (
-            <div className="mt-4">
-              <img
-                ref={imgRef}
-                src={fabricImage}
-                hidden
-                onLoad={() => {
-                  const canvas = canvasRef.current;
-                  const ctx = canvas.getContext("2d");
-                  const img = imgRef.current;
+            <input
+              type="file"
+              accept="image/*"
+              className="w-full border border-blue-300 rounded px-3 py-2 bg-white cursor-pointer"
+              onChange={e => {
+                const file = e.target.files[0];
+                if (!file) return;
+                setFabricImage(URL.createObjectURL(file));
+              }}
+            />
 
-                  canvas.width = img.width;
-                  canvas.height = img.height;
-                  ctx.drawImage(img, 0, 0);
-                }}
-              />
-
-              <canvas
-                ref={canvasRef}
-                className="border rounded cursor-crosshair max-w-full"
-                onClick={e => {
-                  const canvas = canvasRef.current;
-                  const ctx = canvas.getContext("2d");
-                  const rect = canvas.getBoundingClientRect();
-
-                  const x = Math.floor(
-                    (e.clientX - rect.left) *
-                      (canvas.width / rect.width)
-                  );
-                  const y = Math.floor(
-                    (e.clientY - rect.top) *
-                      (canvas.height / rect.height)
-                  );
-
-                  const pixel = ctx.getImageData(x, y, 1, 1).data;
-                  const hex = `#${[pixel[0], pixel[1], pixel[2]]
-                    .map(v => v.toString(16).padStart(2, "0"))
-                    .join("")}`;
-
-                  setFabricColor(hex);
-                }}
-              />
-
-              <div className="flex items-center gap-3 mt-3">
-                <div
-                  className="w-6 h-6 rounded border"
-                  style={{ backgroundColor: fabricColor }}
+            {fabricImage && (
+              <div className="mt-4">
+                <img
+                  ref={imgRef}
+                  src={fabricImage}
+                  hidden
+                  onLoad={() => {
+                    const canvas = canvasRef.current;
+                    const ctx = canvas.getContext("2d");
+                    const img = imgRef.current;
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                  }}
                 />
-                <span className="text-sm">{fabricColor}</span>
+
+                <p className="text-sm mt-3 mb-1 text-blue-800">
+                  Click on the fabric to pick color
+                </p>
+
+                <canvas
+                  ref={canvasRef}
+                  className="border-2 border-blue-400 rounded cursor-crosshair max-w-full"
+                  onClick={e => {
+                    const canvas = canvasRef.current;
+                    const ctx = canvas.getContext("2d");
+                    const rect = canvas.getBoundingClientRect();
+                    const x = Math.floor((e.clientX - rect.left) * (canvas.width / rect.width));
+                    const y = Math.floor((e.clientY - rect.top) * (canvas.height / rect.height));
+                    const pixel = ctx.getImageData(x, y, 1, 1).data;
+                    const hex = `#${[pixel[0], pixel[1], pixel[2]]
+                      .map(v => v.toString(16).padStart(2, "0"))
+                      .join("")}`;
+                    setFabricColor(hex);
+                  }}
+                />
+
+                <div className="flex items-center gap-3 mt-3">
+                  <div className="w-6 h-6 rounded border" style={{ backgroundColor: fabricColor }} />
+                  <span className="text-sm font-medium">{fabricColor}</span>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
 
           {/* MEASUREMENTS FORM */}
           <h3 className="font-medium mb-3">Measurements (cm)</h3>
@@ -340,6 +338,7 @@ export default function DesignDetail() {
     </div>
   );
 }
+
 
 
 
