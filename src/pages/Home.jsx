@@ -102,22 +102,22 @@ export default function Home() {
           </h2>
 
           <div className="space-y-3 text-blue-100">
-            <p>
-              <span className="font-medium text-white">Address:</span>  
+            <p className="text-blue-700">
+              <span className="font-medium text-blue-700">Address:</span>  
               &nbsp;H.No.5-37/7a/a/1, Sai Nagar Colony, Bhoodhan Pochampally, Telangana, India
             </p>
 
-            <p>
+            <p className="text-blue-700">
               <span className="font-medium text-blue-700">Phone:</span>  
               &nbsp;+91 9398336923
             </p>
 
-            <p>
+            <p className="text-blue-700">
               <span className="font-medium text-blue-700">Email:</span>  
               &nbsp;orders.snehaembroideryworks@gmail.com
             </p>
 
-            <p>
+            <p className="text-blue-700">
               <span className="font-medium text-blue-700">Location:</span>{" "}
               <a
                 href="https://maps.app.goo.gl/P9UUNQuJaJ9xuXFn7"
@@ -134,6 +134,7 @@ export default function Home() {
     </div>
   );
 }
+
 
 
 
