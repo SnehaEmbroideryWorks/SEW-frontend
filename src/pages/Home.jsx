@@ -6,12 +6,13 @@ import uShapedNeck from "../assets/images/uShapedNeck.png"
 import roundNeck from "../assets/images/roundNeck.png"
 import potNeck from "../assets/images/potNeck.png"
 import starNeck from "../assets/images/starNeck.png"
+
 const neckTypes = [
-  { name: "Boat Neck", slug: "boat-neck",image:boatNeck },
-  { name: "Round Neck", slug: "round-neck",image:roundNeck},
-  { name: "U-Shaped Neck", slug: "u-shaped-neck",image:uShapedNeck },
-  { name: "Pot Neck", slug: "pot-neck",image:potNeck },
-  { name: "Star Neck", slug: "star-neck",image:starNeck }
+  { name: "Boat Neck", slug: "boat-neck", image: boatNeck },
+  { name: "Round Neck", slug: "round-neck", image: roundNeck },
+  { name: "U-Shaped Neck", slug: "u-shaped-neck", image: uShapedNeck },
+  { name: "Pot Neck", slug: "pot-neck", image: potNeck },
+  { name: "Star Neck", slug: "star-neck", image: starNeck }
 ];
 
 export default function Home() {
@@ -35,16 +36,14 @@ export default function Home() {
             </p>
 
             <div
-              
               className="flex w-fit gap-4 bg-blue-900 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition "
             >
               <div>
                 Browse Designs
-                </div> 
-                <div className="p-1">
-                  <GoArrowDown />
-                </div>
-
+              </div>
+              <div className="p-1">
+                <GoArrowDown />
+              </div>
             </div>
           </div>
 
@@ -60,41 +59,78 @@ export default function Home() {
       </section>
 
       {/* NECK TYPE CARDS */}
-<section className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
-  <h2 className="text-2xl font-semibold text-center text-blue-900 mb-10">
-    Browse by Neck Type
-  </h2>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <h2 className="text-2xl font-semibold text-center text-blue-900 mb-10">
+          Browse by Neck Type
+        </h2>
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
-    {neckTypes.map(type => (
-      <Link
-        key={type.slug}
-        to={`/category/${type.slug}`}
-        className="group border border-blue-200 rounded-xl p-4 sm:p-6 text-center hover:shadow-lg transition bg-white"
-      >
-        {/* Image area */}
-        <div className="w-full aspect-square mb-4 flex items-center justify-center overflow-hidden rounded-lg ">
-          <img
-            src={type.image}   // <-- add image path in data
-            alt={type.name}
-            className="w-full h-full object-contain group-hover:scale-105 transition"
-          />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
+          {neckTypes.map(type => (
+            <Link
+              key={type.slug}
+              to={`/category/${type.slug}`}
+              className="group border border-blue-200 rounded-xl p-4 sm:p-6 text-center hover:shadow-lg transition bg-white"
+            >
+              {/* Image area */}
+              <div className="w-full aspect-square mb-4 flex items-center justify-center overflow-hidden rounded-lg ">
+                <img
+                  src={type.image}
+                  alt={type.name}
+                  className="w-full h-full object-contain group-hover:scale-105 transition"
+                />
+              </div>
+
+              {/* Type name */}
+              <h3 className="text-sm sm:text-base font-medium text-blue-800 mb-2">
+                {type.name}
+              </h3>
+
+              {/* CTA */}
+              <p className="text-xs sm:text-sm text-blue-600 group-hover:text-blue-800">
+                View Designs →
+              </p>
+            </Link>
+          ))}
         </div>
+      </section>
 
-        {/* Type name */}
-        <h3 className="text-sm sm:text-base font-medium text-blue-800 mb-2">
-          {type.name}
-        </h3>
+      {/* ABOUT US */}
+      <section className="bg-blue-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold mb-6">
+            About Us
+          </h2>
 
-        {/* CTA */}
-        <p className="text-xs sm:text-sm text-blue-600 group-hover:text-blue-800">
-          View Designs →
-        </p>
-      </Link>
-    ))}
-  </div>
-</section>
+          <div className="space-y-3 text-blue-100">
+            <p>
+              <span className="font-medium text-white">Address:</span>  
+              &nbsp;123, Embroidery Street, Silk Market, Chennai, India
+            </p>
 
+            <p>
+              <span className="font-medium text-white">Phone:</span>  
+              &nbsp;+91 98765 43210
+            </p>
+
+            <p>
+              <span className="font-medium text-white">Email:</span>  
+              &nbsp;support@embroiderystudio.com
+            </p>
+
+            <p>
+              <span className="font-medium text-white">Location:</span>{" "}
+              <a
+                href="https://www.google.com/maps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                View on Google Maps
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
