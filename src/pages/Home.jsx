@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT US */}
-      <section className="bg-blue-900 text-white py-12">
+      <section className="bg-blue-200 text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-6">
             About Us
@@ -104,23 +104,23 @@ export default function Home() {
           <div className="space-y-3 text-blue-100">
             <p>
               <span className="font-medium text-white">Address:</span>  
-              &nbsp;123, Embroidery Street, Silk Market, Chennai, India
+              &nbsp;H.No.5-37/7a/a/1, Sai Nagar Colony, Bhoodhan Pochampally, Telangana, India
             </p>
 
             <p>
               <span className="font-medium text-white">Phone:</span>  
-              &nbsp;+91 98765 43210
+              &nbsp;+91 9398336923
             </p>
 
             <p>
               <span className="font-medium text-white">Email:</span>  
-              &nbsp;support@embroiderystudio.com
+              &nbsp;orders.snehaembroideryworks@gmail.com
             </p>
 
             <p>
               <span className="font-medium text-white">Location:</span>{" "}
               <a
-                href="https://www.google.com/maps"
+                href="https://maps.app.goo.gl/P9UUNQuJaJ9xuXFn7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-white"
@@ -134,3 +134,4 @@ export default function Home() {
     </div>
   );
 }
+
