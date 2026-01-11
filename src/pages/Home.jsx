@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT US */}
-      <section className="bg-blue-200 text-white py-12">
+      <section className="bg-blue-100 text-blue-700 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-6">
             About Us
@@ -134,4 +134,5 @@ export default function Home() {
     </div>
   );
 }
+
 
