@@ -95,45 +95,57 @@ export default function Home() {
       </section>
 
       {/* ABOUT US */}
-      <section className="bg-blue-100 text-blue-700 py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl font-semibold mb-6">
-            About Us
-          </h2>
+      <section className="bg-blue-100 text-blue-800 py-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900 mb-8 text-center sm:text-left">
+      About Us
+    </h2>
 
-          <div className="space-y-3 text-blue-100">
-            <p className="text-blue-700">
-              <span className="font-medium text-blue-900">Address:</span>  
-              &nbsp;H.No.5-37/7a/a/1, Sai Nagar Colony, Bhoodhan Pochampally, Telangana, India
-            </p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-sm sm:text-base">
+      <p>
+        <span className="font-medium text-blue-900">Address:</span>
+        <br className="sm:hidden" />
+        <span className="ml-0 sm:ml-1">
+          H.No.5-37/7a/a/1, Sai Nagar Colony, Bhoodhan Pochampally, Telangana, India
+        </span>
+      </p>
 
-            <p className="text-blue-700">
-              <span className="font-medium text-blue-900">Phone:</span>  
-              &nbsp;+91 9398336923
-            </p>
+      <p>
+        <span className="font-medium text-blue-900">Phone:</span>
+        <br className="sm:hidden" />
+        <span className="ml-0 sm:ml-1">
+          +91 9398336923
+        </span>
+      </p>
 
-            <p className="text-blue-700">
-              <span className="font-medium text-blue-900">Email:</span>  
-              &nbsp;orders.snehaembroideryworks@gmail.com
-            </p>
+      <p>
+        <span className="font-medium text-blue-900">Email:</span>
+        <br className="sm:hidden" />
+        <span className="ml-0 sm:ml-1 break-all">
+          orders.snehaembroideryworks@gmail.com
+        </span>
+      </p>
 
-            <p className="text-blue-700">
-              <span className="font-medium text-blue-900">Location:</span>{" "}
-              <a
-                href="https://maps.app.goo.gl/P9UUNQuJaJ9xuXFn7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-white"
-              >
-                View on Google Maps
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
+      <p>
+        <span className="font-medium text-blue-900">Location:</span>
+        <br className="sm:hidden" />
+        <a
+          href="https://maps.app.goo.gl/P9UUNQuJaJ9xuXFn7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-0 sm:ml-1 underline text-blue-700 hover:text-blue-900 transition"
+        >
+          View on Google Maps
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
+
 
 
 
