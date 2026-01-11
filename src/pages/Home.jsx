@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT US */}
-      <section className="bg-blue-100 text-black py-12">
+      <section className="bg-blue-100 text-blue-700 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl font-semibold mb-6">
             About Us
@@ -108,17 +108,17 @@ export default function Home() {
             </p>
 
             <p>
-              <span className="font-medium text-white">Phone:</span>  
+              <span className="font-medium text-blue-700">Phone:</span>  
               &nbsp;+91 9398336923
             </p>
 
             <p>
-              <span className="font-medium text-white">Email:</span>  
+              <span className="font-medium text-blue-700">Email:</span>  
               &nbsp;orders.snehaembroideryworks@gmail.com
             </p>
 
             <p>
-              <span className="font-medium text-white">Location:</span>{" "}
+              <span className="font-medium text-blue-700">Location:</span>{" "}
               <a
                 href="https://maps.app.goo.gl/P9UUNQuJaJ9xuXFn7"
                 target="_blank"
@@ -134,6 +134,7 @@ export default function Home() {
     </div>
   );
 }
+
 
 
 
